@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="navbar">
+            <h1>College Management System</h1>
+            <div class="nav-right">
+                <span>Welcome, {{ session['user_name'] }}!</span>
+                <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+            </div>
+        </nav>
+        
+        <div class="dashboard-content">
+            <h2>Student Dashboard</h2>
+            
+            <!-- Personal Details -->
+            <div class="card">
+                <h3>Personal Details</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Name:</span>
+                        <span class="value">{{ student.name }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Roll No:</span>
+                        <span class="value">{{ student.roll_no }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <span class="value">{{ student.email }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Course:</span>
+                        <span class="value">{{ student.course }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Year:</span>
+                        <span class="value">{{ student.year }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Attendance -->
+            <div class="card">
+                <h3>Attendance Record</h3>
+                {% if attendance %}
+                <div class="attendance-summary">
+                    <div class="attendance-stat">
+                        <span class="stat-label">Total Classes:</span>
+                        <span class="stat-value">{{ attendance.total_classes }}</span>
+                    </div>
+                    <div class="attendance-stat">
+                        <span class="stat-label">Classes Attended:</span>
+                        <span class="stat-value">{{ attendance.attended }}</span>
+                    </div>
+                    <div class="attendance-stat">
+                        <span class="stat-label">Percentage:</span>
+                        <span class="stat-value {% if attendance.percentage >= 75 %}text-success{% else %}text-danger{% endif %}">
+                            {{ attendance.percentage }}%
+                        </span>
+                    </div>
+                </div>
+                {% else %}
+                <p>No attendance data available.</p>
+                {% endif %}
+            </div>
+            
+            <!-- Marks -->
+            <div class="card">
+                <h3>Academic Performance</h3>
+                {% if marks %}
+                <table class="marks-table">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for subject, mark in marks.subjects.items() %}
+                        <tr>
+                            <td>{{ subject }}</td>
+                            <td>{{ mark }}</td>
+                            <td>
+                                {% if mark >= 90 %}A+
+                                {% elif mark >= 80 %}A
+                                {% elif mark >= 70 %}B
+                                {% elif mark >= 60 %}C
+                                {% else %}D
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p>No marks data available.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

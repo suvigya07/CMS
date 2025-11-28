@@ -1,0 +1,58 @@
+{
+  "students": [
+    {
+      "id": "S001",
+      "name": "Divya Chauhan",
+      "email": "divya.chauhan@college.edu",
+      "password": "divya123",
+      "course": "Computer Science",
+      "year": "3rd Year",
+      "roll_no": "CS2022001"
+    },
+    {
+      "id": "S002",
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@college.edu",
+      "password": "rahul123",
+      "course": "Computer Science",
+      "year": "3rd Year",
+      "roll_no": "CS2022002"
+    },
+    {
+      "id": "S003",
+      "name": "Priya Verma",
+      "email": "priya.verma@college.edu",
+      "password": "priya123",
+      "course": "Information Technology",
+      "year": "2nd Year",
+      "roll_no": "IT2023015"
+    },
+    {
+      "id": "S004",
+      "name": "Arjun Patel",
+      "email": "arjun.patel@college.edu",
+      "password": "arjun123",
+      "course": "Computer Science",
+      "year": "3rd Year",
+      "roll_no": "CS2022003"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "T001",
+      "name": "Dr. Suresh Kumar",
+      "email": "suresh.kumar@college.edu",
+      "password": "teacher123",
+      "department": "Computer Science",
+      "subjects": ["Data Structures", "Algorithms", "Database Management"]
+    },
+    {
+      "id": "T002",
+      "name": "Prof. Anita Singh",
+      "email": "anita.singh@college.edu",
+      "password": "teacher123",
+      "department": "Information Technology",
+      "subjects": ["Web Development", "Python Programming", "Software Engineering"]
+    }
+  ]
+}

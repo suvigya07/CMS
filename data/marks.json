@@ -1,0 +1,48 @@
+{
+  "marks": [
+    {
+      "student_id": "S001",
+      "student_name": "Divya Chauhan",
+      "subjects": {
+        "Data Structures": 85,
+        "Algorithms": 92,
+        "Database Management": 88,
+        "Operating Systems": 90,
+        "Computer Networks": 87
+      }
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Rahul Sharma",
+      "subjects": {
+        "Data Structures": 78,
+        "Algorithms": 82,
+        "Database Management": 75,
+        "Operating Systems": 80,
+        "Computer Networks": 79
+      }
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Priya Verma",
+      "subjects": {
+        "Web Development": 91,
+        "Python Programming": 88,
+        "Software Engineering": 85,
+        "Database Basics": 89,
+        "Computer Fundamentals": 90
+      }
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Arjun Patel",
+      "subjects": {
+        "Data Structures": 88,
+        "Algorithms": 86,
+        "Database Management": 90,
+        "Operating Systems": 84,
+        "Computer Networks": 87
+      }
+    }
+  ]
+}

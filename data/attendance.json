@@ -1,0 +1,32 @@
+{
+  "attendance": [
+    {
+      "student_id": "S001",
+      "student_name": "Divya Chauhan",
+      "total_classes": 102,
+      "attended": 93,
+      "percentage": 91.18
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Rahul Sharma",
+      "total_classes": 100,
+      "attended": 85,
+      "percentage": 85.0
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Priya Verma",
+      "total_classes": 100,
+      "attended": 88,
+      "percentage": 88.0
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Arjun Patel",
+      "total_classes": 100,
+      "attended": 90,
+      "percentage": 90.0
+    }
+  ]
+}
